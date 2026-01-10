@@ -1,0 +1,33 @@
+{
+  "name": "krisp-local-monitoring",
+  "version": "1.0.0",
+  "description": "Krisp Local Monitoring API",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "clean": "rm -rf dist",
+    "build": "npm run clean && tsc",
+    "start": "node dist/example.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/krispai/kr-local-monitoring.git"
+  },
+  "keywords": [
+    "krisp"
+  ],
+  "author": "krisp.ai",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/krispai/kr-local-monitoring/issues"
+  },
+  "homepage": "https://github.com/krispai/kr-local-monitoring#readme",
+  "dependencies": {
+    "socket.io-client": "4.8.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
+  }
+}
