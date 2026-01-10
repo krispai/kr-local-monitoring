@@ -76,7 +76,7 @@ npm start
 ## Project Structure
 
 ```
-KrispDataCollector/
+krisp-local-monitoring/
 ├── src/
 │   ├── index.ts           # Main SDK class
 │   ├── connection-manager.ts  # WebSocket connection handling

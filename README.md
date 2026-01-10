@@ -1,4 +1,4 @@
-# Krisp Data Collector SDK
+# Krisp Local Monitoring
 
 Client SDK for connecting to Krisp Desktop WebSocket API to read device states and Krisp feature status.
 
@@ -17,7 +17,7 @@ Client SDK for connecting to Krisp Desktop WebSocket API to read device states a
 > **Note:** This NPM package is currently in progress and not ready for production use.
 
 ```bash
-npm install krisp-data-collector
+npm install krisp-local-monitoring
 ```
 
 ## Usage
@@ -25,9 +25,9 @@ npm install krisp-data-collector
 ### Basic Example
 
 ```typescript
-import { KrispSDK, SDKEvent } from 'krisp-data-collector';
+import { KrispLocalMonitoringSDK, SDKEvent } from 'krisp-local-monitoring';
 
-const sdk = new KrispSDK({
+const sdk = new KrispLocalMonitoringSDK({
   // Optional: auto-reconnect (default: true)
   autoReconnect: true,
   // Optional: max reconnect attempts (default: unlimited)
@@ -105,7 +105,7 @@ await sdk.unsubscribe(['ac']);
 
 // By default, SDK auto-subscribes to all topics on connect
 // You can disable this:
-const sdk = new KrispSDK({
+const sdk = new KrispLocalMonitoringSDK({
   autoSubscribe: false,
   // Or subscribe to specific topics only:
   autoSubscribeTopics: ['devices', 'nc', 'in_call'],
@@ -131,7 +131,7 @@ if (status.error) {
 ### Error Handling
 
 ```typescript
-import { KrispSDK, ErrorCode } from 'krisp-data-collector';
+import { KrispLocalMonitoringSDK, ErrorCode } from 'krisp-local-monitoring';
 
 try {
   await sdk.connect();
@@ -148,14 +148,14 @@ try {
 
 ### API Reference
 
-### `KrispSDK`
+### `KrispLocalMonitoringSDK`
 
 Main SDK class.
 
 #### Constructor
 
 ```typescript
-new KrispSDK(options?: KrispSDKOptions)
+new KrispLocalMonitoringSDK(options?: KrispSDKOptions)
 ```
 
 **Options:**
