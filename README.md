@@ -237,14 +237,11 @@ The SDK automatically handles reconnection with the following features:
 # Install dependencies
 npm install
 
-# Build (automatically cleans dist/ first)
+# Build
 npm run build
 
 # Build and run example
 npm start
-
-# Clean build artifacts
-npm run clean
 ```
 
 ## License

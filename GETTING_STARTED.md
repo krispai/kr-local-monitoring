@@ -22,7 +22,7 @@ Build the TypeScript code to JavaScript:
 npm run build
 ```
 
-This will automatically clean the `dist/` directory and compile the TypeScript files in `src/` to JavaScript in `dist/`.
+This will compile the TypeScript files in `src/` to JavaScript in `dist/`.
 
 ## Running the Example
 
@@ -32,7 +32,7 @@ Build and run the example:
 npm start
 ```
 
-This will automatically clean the `dist/` directory, build the TypeScript files, and run the compiled example.
+This will build the TypeScript files, and run the compiled example.
 
 Alternatively, you can build and run separately:
 
