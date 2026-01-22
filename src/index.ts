@@ -502,6 +502,19 @@ export class KrispLocalMonitoringSDK implements IKrispLocalMonitoringSDK {
 
   private async handleReconnection(): Promise<void> {
     try {
+      // Wait for connection to be fully established
+      // The reconnect event might fire before the socket is ready
+      let retries = 10;
+      while (!this.connectionManager.isConnected() && retries > 0) {
+        await new Promise(resolve => setTimeout(resolve, 100));
+        retries--;
+      }
+
+      if (!this.connectionManager.isConnected()) {
+        console.warn('Connection not ready after reconnection');
+        return;
+      }
+
       // Re-fetch initial states
       await this.fetchInitialStates();
 
