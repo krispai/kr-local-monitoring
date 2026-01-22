@@ -4,9 +4,19 @@
   "description": "Krisp Local Monitoring API",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "browser": "dist/krisp-local-monitoring.es.js",
+  "module": "dist/krisp-local-monitoring.es.js",
+  "files": [
+    "dist",
+    "src"
+  ],
   "scripts": {
     "build": "tsc",
-    "start": "node dist/example.js"
+    "build:browser": "vite build",
+    "build:all": "npm run build && npm run build:browser",
+    "start": "node dist/example.js",
+    "dev": "vite",
+    "preview": "vite preview"
   },
   "repository": {
     "type": "git",
@@ -27,6 +37,7 @@
   "devDependencies": {
     "@types/node": "^20.10.0",
     "ts-node": "^10.9.2",
-    "typescript": "^5.3.3"
+    "typescript": "^5.3.3",
+    "vite": "^5.0.0"
   }
 }
