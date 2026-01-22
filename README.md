@@ -14,10 +14,8 @@ Client SDK for connecting to Krisp Desktop WebSocket API to read device states a
 
 ## Installation
 
-> **Note:** This NPM package is currently in progress and not ready for production use.
-
 ```bash
-npm install krisp-local-monitoring
+npm install @krisp.ai/kr-local-monitoring
 ```
 
 ## Usage
@@ -25,7 +23,7 @@ npm install krisp-local-monitoring
 ### Basic Example
 
 ```typescript
-import { KrispLocalMonitoringSDK, SDKEvent } from 'krisp-local-monitoring';
+import { KrispLocalMonitoringSDK, SDKEvent } from '@krisp.ai/kr-local-monitoring';
 
 const sdk = new KrispLocalMonitoringSDK({
   // Optional: auto-reconnect (default: true)
@@ -131,7 +129,7 @@ if (status.error) {
 ### Error Handling
 
 ```typescript
-import { KrispLocalMonitoringSDK, ErrorCode } from 'krisp-local-monitoring';
+import { KrispLocalMonitoringSDK, ErrorCode } from '@krisp.ai/kr-local-monitoring';
 
 try {
   await sdk.connect();
@@ -246,4 +244,4 @@ npm start
 
 ## License
 
-ISC
+MIT © Krisp Technologies, Inc.

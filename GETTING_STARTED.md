@@ -76,7 +76,7 @@ npm start
 ## Project Structure
 
 ```
-krisp-local-monitoring/
+kr-local-monitoring/
 ├── src/
 │   ├── index.ts           # Main SDK class
 │   ├── connection-manager.ts  # WebSocket connection handling
@@ -108,3 +108,7 @@ krisp-local-monitoring/
 
 - Run `npm install` to ensure all dependencies are installed
 - Check that your TypeScript version matches the project requirements
+
+## License
+
+MIT © Krisp Technologies, Inc.
